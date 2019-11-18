@@ -18,9 +18,10 @@ import { TasksComponent } from './tasks/tasks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ],
 })
-export class AppModule { }
+export class AppModule {
+}
