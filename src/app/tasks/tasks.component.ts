@@ -10,12 +10,12 @@ import { Task } from '../task';
 export class TasksComponent implements OnInit {
   @Input() task: Task;
 
-  constructor(private tasksService: TasksService) { }
+  constructor(public tasksService: TasksService) { }
 
   ngOnInit() {
   }
 
-  private removeTask(id: number): void {
+  removeTask(id: number): void {
     this.tasksService.removeTask(id);
   }
 }

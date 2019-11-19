@@ -5,13 +5,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-new-task',
   templateUrl: './new-task.component.html',
-  styleUrls: ['./new-task.component.css']
+  styleUrls: [ './new-task.component.css' ],
 })
 export class NewTaskComponent implements OnInit {
-  private taskBody: string;
+  taskBody: string;
   closeResult: string;
 
-  constructor(private tasksService: TasksService, private modalService: NgbModal) {
+  constructor(
+    private tasksService: TasksService,
+    private modalService: NgbModal,
+  ) {
     this.taskBody = '';
   }
 
@@ -19,10 +22,10 @@ export class NewTaskComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'})
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
   }
 
-  private addTask(): void {
+  addTask(): void {
     this
       .tasksService
       .addTask(this.taskBody);
