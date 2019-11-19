@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { HeroComponent } from './hero/hero.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TasksComponent } from './tasks/tasks.component';
-import { TableComponent } from './table/table.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
@@ -16,13 +15,12 @@ import { NewTaskComponent } from './new-task/new-task.component';
     HomeComponent,
     HeroComponent,
     TasksComponent,
-    TableComponent,
-    NewTaskComponent
+    NewTaskComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ],
