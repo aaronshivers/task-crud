@@ -8,6 +8,7 @@ import { HeroComponent } from './hero/hero.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TasksComponent } from './tasks/tasks.component';
 import { TableComponent } from './table/table.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TableComponent } from './table/table.component';
     HomeComponent,
     HeroComponent,
     TasksComponent,
-    TableComponent
+    TableComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,
