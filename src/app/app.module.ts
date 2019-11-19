@@ -4,17 +4,28 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { HeroComponent } from './hero/hero.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TasksComponent } from './tasks/tasks.component';
+import { FormsModule } from '@angular/forms';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeroComponent,
+    TasksComponent,
+    NewTaskComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ],
 })
-export class AppModule { }
+export class AppModule {
+}
