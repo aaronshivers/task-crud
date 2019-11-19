@@ -1,23 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Task {
-  body: string;
-}
-
-const TASKS: Task[] = [
-  {
-    body: 'Eat Lunch',
-  },
-  {
-    body: 'Walk Dog',
-  },
-  {
-    body: 'Learn Karate',
-  },
-  {
-    body: 'Win Lottery',
-  },
-];
+import { TASKS } from '../mock-tasks';
 
 @Component({
   selector: 'app-table',
