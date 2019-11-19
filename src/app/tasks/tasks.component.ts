@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TasksService } from '../tasks.service';
+import { Task } from '../task';
 
 @Component({
   selector: 'app-tasks',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
+  @Input() task: Task;
 
-  constructor() { }
+  constructor(private tasksService: TasksService) { }
 
   ngOnInit() {
   }
 
+  private removeTask(id: number): void {
+    this.tasksService.removeTask(id);
+  }
 }
