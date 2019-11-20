@@ -1,3 +1,3 @@
-export interface Task {
-  body: string;
+export class Task {
+  constructor(public id: number, public body: string) {}
 }

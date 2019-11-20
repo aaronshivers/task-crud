@@ -1,41 +1,22 @@
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">New Task</h4>
-    <button
-      (click)="modal.dismiss('Cross click')"
-      aria-label="Close"
-      class="close"
-      type="button">
+    <h4 class="modal-title" id="modal-basic-title">Add Task</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <form>
-      <div class="form-group">
-        <label for="taskBody">Task</label>
-        <div class="input-group">
-          <input
-            class="form-control"
-            id="taskBody"
-            name="dp"
-            ngbDatepicker
-            placeholder="new task...">
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button
-      (click)="modal.close('Save click')"
-      class="btn btn-outline-dark"
-      type="button">Save
-    </button>
+
+    <div>
+      <input class="mr-3" type="text" [(ngModel)]="taskBody" value="{{ taskBody }}">
+      <button class="btn btn-primary" (click)="addTask()">submit</button>
+    </div>
+
+
   </div>
 </ng-template>
 
-<button (click)="open(content)" class="btn btn-lg btn-outline-primary">New
-  Task
-</button>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Task</button>
 
 <hr>
 
