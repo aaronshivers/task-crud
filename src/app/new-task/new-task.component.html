@@ -1,22 +1,31 @@
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Add Task</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <button
+      (click)="modal.dismiss('Cross click')"
+      aria-label="Close"
+      class="close"
+      type="button">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-
     <div>
-      <input class="mr-3" type="text" [(ngModel)]="taskBody" value="{{ taskBody }}">
-      <button class="btn btn-primary" (click)="addTask()">submit</button>
+      <label for="taskInput">New Task</label>
+      <input
+        [(ngModel)]="taskBody"
+        class="form-control mb-3"
+        id="taskInput"
+        type="text"
+        value="{{ taskBody }}">
+      <button (click)="addTask()" class="btn btn-primary">submit</button>
     </div>
-
-
   </div>
 </ng-template>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Task</button>
+<button (click)="open(content)" class="btn btn-lg btn-outline-primary">
+  Add Task
+</button>
 
 <hr>
 
